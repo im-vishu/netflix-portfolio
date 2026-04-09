@@ -1,62 +1,69 @@
 # Netflix Portfolio
 
-A polished, production-quality web app inspired by Netflix, designed to showcase TypeScript front-end skills, responsive UI, and modern architecture.
+A visually dynamic, production-ready web app inspired by Netflix, built with the latest React ecosystem tools and best practices.
 
 ---
 
 ## ✨ Key Features
 
-- Responsive Netflix-inspired user interface
-- Built with modern **TypeScript** for reliability and maintainability
-- Modular, reusable React components
-- Custom **CSS** design
-- Clean routing and navigation
-- [Add any extra features you’ve built: authentication, user profiles, etc.]
+- Netflix-inspired, responsive UI
+- High-performance build and fast dev experience
+- Clean routing and modern state/data management
+- Typed, maintainable codebase
+- Modular components and design system
+- Interactive 3D and delightful animations
+- Easy testing and code quality assurance
 
 ---
 
 ## 🧱 Tech Stack
 
-- **TypeScript** (96.8%)
-- **CSS** (2.4%)
-- Other (0.8%)
-- [If using React/Vite/Next.js, add here]
-- [Add libraries, tooling, state, backend API, etc., if applicable]
+- React 18
+- TypeScript 5
+- Vite 8 (with SWC)
+- Tailwind CSS
+- react-router-dom
+- @tanstack/react-query
+- Redux (if truly used, otherwise omit)
+- ESLint
+- Vitest & Testing Library
+- Playwright
+- Deployed via GitHub Pages
 
 ---
 
-## 🗂️ Project Structure
+## 💻 Project Structure
 
 ```
 netflix-portfolio/
 ├─ src/
-│  ├─ components/         # Reusable React components
-│  ├─ pages/              # Page-level components/routes
-│  ├─ styles/             # CSS and theme files
-│  ├─ assets/             # Images, icons, static assets
-│  ├─ hooks/              # Custom hooks, if any
-│  ├─ utils/              # Utility functions/helpers
+│  ├─ components/         # Reusable UI and layout components
+│  ├─ pages/              # Route-based views/pages
+│  ├─ hooks/              # Custom hooks (data, form, animation, etc.)
+│  ├─ styles/             # Tailwind config, global CSS, design system
+│  ├─ assets/             # Images, icons, 3D models, fonts
+│  ├─ utils/              # Utility functions and helpers
 │  └─ main.tsx            # App entrypoint
-├─ public/                # Static public files
+├─ public/                # Static files
 ├─ .github/
 │  └─ workflows/          # (Optional) GitHub Actions configs
 ├─ package.json
 ├─ tsconfig.json
+├─ vite.config.ts
 ├─ README.md
 └─ LICENSE
 ```
-
 > Folder layout may evolve as the app grows.
 
 ---
 
 ## ⚙️ Environment Variables
 
-If your project uses API keys or needs config, create a `.env` from `.env.example`:
+If your project uses API keys or needs config, create a `.env` file from `.env.example`:
 
 ```env
 VITE_API_BASE_URL=https://api.example.com
-# more environment variables as needed
+# Add more environment variables as needed
 ```
 
 ---
@@ -69,16 +76,16 @@ cd netflix-portfolio
 npm install
 npm run dev
 ```
-
-Then open http://localhost:3000 in your browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
 ## ✅ Development Commands
 
 ```bash
-npm run lint           # Lint the code
-npm run test           # Run tests (if configured)
+npm run lint           # Lint the codebase with ESLint
+npm run test           # Run unit/component tests (Vitest & Testing Library)
+npm run test:e2e       # Run end-to-end tests (Playwright)
 npm run build          # Build for production
 ```
 
@@ -86,8 +93,8 @@ npm run build          # Build for production
 
 ## 🤝 Contributing
 
-1. Fork the repository and create a feature branch
-2. Make your changes with clear commits
+1. Fork the repository & create a feature branch
+2. Make changes with clear commits
 3. Open a pull request to `main`
 4. Ensure lint/build/tests succeed
 
@@ -103,4 +110,3 @@ npm run build          # Build for production
 ## 📬 Contact
 
 - GitHub: [im-vishu](https://github.com/im-vishu)
-
