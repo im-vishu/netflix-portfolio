@@ -1,16 +1,26 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, User, FolderKanban, Briefcase, Wrench, GraduationCap, Mail, Layers } from "lucide-react";
+import {
+  Menu,
+  X,
+  User,
+  FolderKanban,
+  Briefcase,
+  Wrench,
+  GraduationCap,
+  Mail,
+  Layers,
+} from "lucide-react";
 
 const navItems = [
-  { id: "About", icon: User, label: "About" },
-  { id: "Profiles", icon: Layers, label: "Profiles" },
-  { id: "Projects", icon: FolderKanban, label: "Projects" },
-  { id: "Experience", icon: Briefcase, label: "Experience" },
-  { id: "Skills", icon: Wrench, label: "Skills" },
-  { id: "Education", icon: GraduationCap, label: "Education" },
-  { id: "Contact", icon: Mail, label: "Contact" },
+  { id: "about", icon: User, label: "About" },
+  { id: "profiles", icon: Layers, label: "Profiles" },
+  { id: "projects", icon: FolderKanban, label: "Projects" },
+  { id: "experience", icon: Briefcase, label: "Experience" },
+  { id: "skills", icon: Wrench, label: "Skills" },
+  { id: "education", icon: GraduationCap, label: "Education" },
+  { id: "contact", icon: Mail, label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -22,7 +32,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      const sections = navItems.map(item => document.getElementById(item.id.toLowerCase()));
+      const sections = navItems.map((item) =>
+        document.getElementById(item.id)
+      );
       let current = "";
       for (const section of sections) {
         if (section) {
@@ -38,7 +50,7 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     setMobileOpen(false);
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -54,19 +66,21 @@ const Navbar = () => {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+          {/* Home/Brand Button */}
           <motion.button
             onClick={() => navigate("/")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative font-display text-xl tracking-widest text-gradient-red sm:text-2xl"
+            aria-label="Portfolio Home"
           >
             PORTFOLIO
           </motion.button>
 
-          {/* Desktop nav - icons only */}
+          {/* Desktop nav */}
           <div className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => {
-              const isActive = activeSection === item.id.toLowerCase();
+              const isActive = activeSection === item.id;
               const Icon = item.icon;
               return (
                 <motion.button
@@ -80,6 +94,7 @@ const Navbar = () => {
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                   title={item.label}
+                  aria-label={item.label}
                 >
                   {isActive && (
                     <motion.span
@@ -110,14 +125,27 @@ const Navbar = () => {
             onClick={() => setMobileOpen(!mobileOpen)}
             whileTap={{ scale: 0.9 }}
             className="relative rounded-lg border border-border/50 bg-card/50 p-2 text-foreground backdrop-blur-sm md:hidden"
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             <AnimatePresence mode="wait">
               {mobileOpen ? (
-                <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <X className="h-5 w-5" />
                 </motion.div>
               ) : (
-                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <Menu className="h-5 w-5" />
                 </motion.div>
               )}
@@ -138,7 +166,7 @@ const Navbar = () => {
           >
             <div className="p-4 space-y-1">
               {navItems.map((item, i) => {
-                const isActive = activeSection === item.id.toLowerCase();
+                const isActive = activeSection === item.id;
                 const Icon = item.icon;
                 return (
                   <motion.button
@@ -152,6 +180,7 @@ const Navbar = () => {
                         ? "bg-primary/10 text-primary border border-primary/20"
                         : "text-muted-foreground hover:bg-card/50 hover:text-foreground"
                     }`}
+                    aria-label={item.label}
                   >
                     <Icon className="h-4 w-4" />
                     <span className="text-sm font-medium">{item.label}</span>
