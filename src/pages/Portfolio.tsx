@@ -20,7 +20,7 @@ const Portfolio = () => (
     <EducationSection />
     <ContactSection />
     <footer className="border-t border-border bg-background px-6 py-8 text-center text-sm text-muted-foreground">
-      © 2026 John Doe. All rights reserved.
+      © 2026 Vishant Chaudhary. All rights reserved.
     </footer>
   </div>
 );

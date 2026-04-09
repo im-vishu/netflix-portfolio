@@ -46,11 +46,11 @@ const HeroSection = () => {
           </motion.div>
 
           <h1 className="font-display text-5xl leading-none text-foreground sm:text-7xl md:text-8xl lg:text-9xl">
-            <TypewriterText text="JOHN" delay={400} speed={120} />
+            <TypewriterText text="Vishant" delay={400} speed={120} />
           </h1>
           <h1 className="font-display text-5xl leading-none sm:text-7xl md:text-8xl lg:text-9xl">
             <TypewriterText
-              text="DOE"
+              text="CHAUDHARY"
               delay={1000}
               speed={120}
               className="text-gradient-red"
