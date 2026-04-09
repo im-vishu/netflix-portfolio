@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 357 92% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 357 92% 47%;
+
+    --radius: 0.25rem;
+
+    --netflix-red: 357 92% 47%;
+    --netflix-dark: 0 0% 8%;
+    --netflix-darker: 0 0% 5%;
+    --netflix-card: 0 0% 14%;
+    --netflix-hover: 0 0% 22%;
+    --netflix-text-muted: 0 0% 60%;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 357 92% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 357 92% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer utilities {
+  .netflix-gradient {
+    background: linear-gradient(180deg, transparent 0%, hsl(0 0% 5%) 100%);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px hsl(357 92% 47% / 0.3), 0 0 60px hsl(357 92% 47% / 0.1);
+  }
+
+  .netflix-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .netflix-card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px -12px hsl(357 92% 47% / 0.4);
+  }
+
+  .text-gradient-red {
+    background: linear-gradient(135deg, hsl(357 92% 47%), hsl(357 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-divider {
+    border-top: 3px solid hsl(357 92% 47% / 0.3);
+  }
+
+  /* Glass card base - enhanced */
+  .glass-card {
+    background: linear-gradient(135deg, hsl(0 0% 14% / 0.6), hsl(0 0% 10% / 0.4));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 4px 24px -4px hsl(0 0% 0% / 0.3), inset 0 1px 0 hsl(0 0% 100% / 0.03);
+  }
+  .glass-card:hover {
+    background: linear-gradient(135deg, hsl(0 0% 16% / 0.8), hsl(0 0% 12% / 0.6));
+    border-color: hsl(357 92% 47% / 0.35);
+    box-shadow:
+      0 12px 40px -8px hsl(357 92% 47% / 0.2),
+      0 0 0 1px hsl(0 0% 100% / 0.06),
+      inset 0 1px 0 hsl(0 0% 100% / 0.08),
+      0 0 80px -20px hsl(357 92% 47% / 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* Animated border gradient */
+  .animated-border {
+    position: relative;
+    overflow: hidden;
+  }
+  .animated-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      hsl(357 92% 47% / 0),
+      hsl(357 92% 47% / 0),
+      hsl(357 92% 47% / 0)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: background 0.5s ease;
+    pointer-events: none;
+  }
+  .animated-border:hover::before {
+    background: linear-gradient(
+      135deg,
+      hsl(357 92% 47% / 0.6),
+      hsl(357 80% 60% / 0.3),
+      hsl(357 92% 47% / 0.6)
+    );
+  }
+
+  /* Shimmer overlay */
+  .shimmer-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      hsl(0 0% 100% / 0.03) 45%,
+      hsl(0 0% 100% / 0.06) 50%,
+      hsl(0 0% 100% / 0.03) 55%,
+      transparent 60%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+    pointer-events: none;
+  }
+  .shimmer-hover:hover::after {
+    transform: translateX(100%);
+  }
+
+  /* Inner glow effect for premium cards */
+  .card-inner-glow {
+    position: relative;
+  }
+  .card-inner-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background: radial-gradient(
+      ellipse at 50% 0%,
+      hsl(357 92% 47% / 0.08) 0%,
+      transparent 70%
+    );
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  .card-inner-glow:hover::after {
+    opacity: 1;
+  }
+}
