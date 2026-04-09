@@ -1,13 +1,62 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
+// Update project links and images as appropriate!
 const projects = [
-  { title: "E-Commerce Platform", tag: "React · Node.js", desc: "Full-stack e-commerce with payment integration and real-time inventory.", color: "357 80% 50%" },
-  { title: "AI Dashboard", tag: "Python · React", desc: "Analytics dashboard powered by machine learning for business insights.", color: "210 100% 56%" },
-  { title: "Social Media App", tag: "React Native · Firebase", desc: "Cross-platform social app with real-time messaging and stories.", color: "150 70% 45%" },
-  { title: "Portfolio CMS", tag: "Next.js · Prisma", desc: "Headless CMS for creatives to manage and showcase their work.", color: "330 80% 55%" },
-  { title: "Task Management", tag: "TypeScript · PostgreSQL", desc: "Kanban-style project management tool with team collaboration.", color: "40 90% 50%" },
-  { title: "Weather App", tag: "Vue · API", desc: "Beautiful weather forecasting with location-based services.", color: "190 80% 50%" },
+  {
+    title: "E-Commerce Platform",
+    tag: "React · Node.js",
+    desc: "Full-stack e-commerce with payment integration and real-time inventory.",
+    color: "357 80% 50%",
+    github: "https://github.com/your-username/e-commerce-platform",
+    demo: "https://your-ecommerce-demo.com",
+    image: "/images/e-commerce-banner.png",
+  },
+  {
+    title: "AI Dashboard",
+    tag: "Python · React",
+    desc: "Analytics dashboard powered by machine learning for business insights.",
+    color: "210 100% 56%",
+    github: "https://github.com/your-username/ai-dashboard",
+    demo: "https://your-ai-dashboard.com",
+    image: "/images/ai-dashboard.png",
+  },
+  {
+    title: "Social Media App",
+    tag: "React Native · Firebase",
+    desc: "Cross-platform social app with real-time messaging and stories.",
+    color: "150 70% 45%",
+    github: "https://github.com/your-username/social-media-app",
+    demo: "https://your-social-media-demo.com",
+    image: "/images/social-media-app.png",
+  },
+  {
+    title: "Portfolio CMS",
+    tag: "Next.js · Prisma",
+    desc: "Headless CMS for creatives to manage and showcase their work.",
+    color: "330 80% 55%",
+    github: "https://github.com/your-username/portfolio-cms",
+    demo: "https://your-portfolio-cms.com",
+    image: "/images/portfolio-cms.png",
+  },
+  {
+    title: "Task Management",
+    tag: "TypeScript · PostgreSQL",
+    desc: "Kanban-style project management tool with team collaboration.",
+    color: "40 90% 50%",
+    github: "https://github.com/your-username/task-management",
+    demo: "https://your-task-manager.com",
+    image: "/images/task-management.png",
+  },
+  {
+    title: "Weather App",
+    tag: "Vue · API",
+    desc: "Beautiful weather forecasting with location-based services.",
+    color: "190 80% 50%",
+    github: "https://github.com/your-username/weather-app",
+    demo: "https://your-weather-app.com",
+    image: "/images/weather-app.png",
+  },
 ];
 
 const ProjectsSection = () => (
@@ -36,22 +85,55 @@ const ProjectsSection = () => (
           >
             <div
               className="relative aspect-video flex items-center justify-center overflow-hidden transition-all duration-500"
-              style={{ background: `linear-gradient(135deg, hsl(${p.color} / 0.15), hsl(${p.color} / 0.05))` }}
+              style={{
+                background: `linear-gradient(135deg, hsl(${p.color} / 0.15), hsl(${p.color} / 0.05))`,
+              }}
             >
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={`${p.title} screenshot`}
+                  className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+              )}
               <span
-                className="font-display text-6xl transition-all duration-500 group-hover:scale-125"
-                style={{ color: `hsl(${p.color} / 0.15)` }}
+                className="z-10 font-display text-6xl transition-all duration-500 group-hover:scale-125"
+                style={{ color: `hsl(${p.color} / 0.12)` }}
               >
                 {p.title.charAt(0)}
               </span>
-              {/* Hover overlay */}
               <div className="absolute inset-0 flex items-center justify-center gap-3 bg-background/60 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
-                <motion.div whileHover={{ scale: 1.1 }} className="rounded-full border border-border/50 bg-card p-2.5">
-                  <Github className="h-5 w-5 text-foreground" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="rounded-full border border-primary/50 bg-primary/10 p-2.5">
-                  <ArrowUpRight className="h-5 w-5 text-primary" />
-                </motion.div>
+                {p.github && (
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="rounded-full border border-border/50 bg-card p-2.5"
+                  >
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${p.title} GitHub`}
+                    >
+                      <Github className="h-5 w-5 text-foreground" />
+                    </a>
+                  </motion.div>
+                )}
+                {p.demo && (
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="rounded-full border border-primary/50 bg-primary/10 p-2.5"
+                  >
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${p.title} Live Demo`}
+                    >
+                      <ArrowUpRight className="h-5 w-5 text-primary" />
+                    </a>
+                  </motion.div>
+                )}
               </div>
             </div>
             <div className="p-4 sm:p-5">
@@ -62,7 +144,18 @@ const ProjectsSection = () => (
                 >
                   {p.tag}
                 </span>
-                <ExternalLink className="h-4 w-4 text-muted-foreground/30 transition-all group-hover:text-foreground" />
+                {p.demo ? (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${p.title} Live Demo`}
+                  >
+                    <ExternalLink className="h-4 w-4 text-muted-foreground/30 transition-all group-hover:text-foreground" />
+                  </a>
+                ) : (
+                  <ExternalLink className="h-4 w-4 text-muted-foreground/30" />
+                )}
               </div>
               <h3 className="mt-2 font-semibold text-foreground">{p.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
