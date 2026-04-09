@@ -56,17 +56,42 @@ const ContactSection = () => (
           </div>
 
           <div className="flex gap-3 pt-4">
-            {[Github, Linkedin, Twitter].map((Icon, i) => (
-              <motion.a
-                key={i}
-                href="#"
-                whileHover={{ y: -6, scale: 1.15, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
-                className="glass-card group rounded-xl p-3 text-muted-foreground transition-all hover:text-primary hover:shadow-lg hover:shadow-primary/20"
-              >
-                <Icon className="h-5 w-5" />
-              </motion.a>
-            ))}
+            {/* GitHub */}
+            <motion.a
+              href="https://github.com/im-vishu"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              whileHover={{ y: -6, scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+              className="glass-card group rounded-xl p-3 text-muted-foreground transition-all hover:text-primary hover:shadow-lg hover:shadow-primary/20"
+            >
+              <Github className="h-5 w-5" />
+            </motion.a>
+            {/* LinkedIn */}
+            <motion.a
+              href="https://linkedin.com/in/vishanttchaudhary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              whileHover={{ y: -6, scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+              className="glass-card group rounded-xl p-3 text-muted-foreground transition-all hover:text-primary hover:shadow-lg hover:shadow-primary/20"
+            >
+              <Linkedin className="h-5 w-5" />
+            </motion.a>
+            {/* Twitter/X */}
+            <motion.a
+              href="https://x.com/iam_vishant"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter(X)"
+              whileHover={{ y: -6, scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+              className="glass-card group rounded-xl p-3 text-muted-foreground transition-all hover:text-primary hover:shadow-lg hover:shadow-primary/20"
+            >
+              <Twitter className="h-5 w-5" />
+            </motion.a>
           </div>
         </motion.div>
 
