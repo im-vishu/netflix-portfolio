@@ -86,7 +86,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 npm run lint           # Lint the codebase with ESLint
 npm run test           # Run unit/component tests (Vitest & Testing Library)
 npm run test:e2e       # Run end-to-end tests (Playwright)
-npm run build          # Build for production
+npm run build          # Build for production.
 ```
 
 ---
