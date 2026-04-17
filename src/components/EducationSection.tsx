@@ -4,17 +4,10 @@ import { GraduationCap, Award } from "lucide-react";
 // Education data
 const education = [
   {
-    degree: "M.Sc. Computer Science",
-    school: "MIT",
-    year: "2018",
-    desc: "Specialized in AI & Machine Learning",
-    icon: GraduationCap
-  },
-  {
-    degree: "B.Sc. Software Engineering",
-    school: "Stanford University",
-    year: "2016",
-    desc: "Dean's List, GPA 3.9",
+    degree: "B.Tech in Computer Science",
+    school: "DBUU, Dehradun,India",
+    year: "2022-2026",
+    desc: "Strong academic record, GPA 7.9/10",
     icon: Award
   },
 ];
