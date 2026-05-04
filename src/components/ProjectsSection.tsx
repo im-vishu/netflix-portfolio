@@ -5,7 +5,7 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 const projects = [
   {
     title: "FraudShield-AI",
-    tag: "React · Node.js",
+    tag: "ML · Node.js · Cybersecurity ",
     desc: "FraudShield AI is a real-time fraud detection backend that analyzes transactions, assigns risk scores, and flags suspicious activity using rule-based logic, IP intelligence, and anomaly detection.",
     color: "357 80% 50%",
     github: "https://github.com/im-vishu/FraudShield-AI",
@@ -14,16 +14,16 @@ const projects = [
   },
   {
     title: "Healthify-AgriTech",
-    tag: "Python · React",
+    tag: "SmartFarmingAI · React · PostgreSQL",
     desc: "Healthify AgriTech is an AI-powered platform delivering crop recommendations, disease detection, and smart farming insights using machine learning, real-time data, and scalable full-stack architecture.",
     color: "210 100% 56%",
     github: "https://github.com/im-vishu/Healthify-AgriTech",
     demo: "https://localhost:9000/",
-    image: "/images/ai-dashboard.png",
+    image: "/images/healthify.png",
   },
   {
     title: "F.R.I.D.A.Y",
-    tag: "React Native · Firebase",
+    tag: "Python · AI · Node.js ",
     desc: "F.R.I.D.A.Y is a production-grade voice activated AI assistant built with Node.js, offering real-time conversations, intelligent automation, privacy-first local processing, and extensible cross platform capabilities scalable.",
     color: "150 70% 45%",
     github: "https://github.com/im-vishu/F.R.I.D.A.Y",
@@ -32,12 +32,12 @@ const projects = [
   },
   {
     title: "fuzzy-broccoli",
-    tag: "Next.js · Prisma",
+    tag: "Next.js · Prisma · React ",
     desc: "A modern full-stack beauty platform enabling users to discover branded cosmetics, find affordable dupes, share reviews, engage in real-time discussions, and explore SEO-driven beauty content.",
     color: "330 80% 55%",
     github: "https://github.com/im-vishu/fuzzy-broccoli",
     demo: "https://your-portfolio-cms.com",
-    image: "/images/portfolio-cms.png",
+    image: "/images/fuzzy-broccoli.png",
   },
   {
     title: "MediSync",
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     title: "Uber-Clone",
-    tag: "Vue · API",
+    tag: "MERN · API",
     desc: "Full-stack Uber clone built using MERN stack featuring rider-driver roles, secure JWT authentication, bcrypt hashing, HTTP-only cookies, token blacklisting, and scalable MVC architecture with modern frontend.",
     color: "190 80% 50%",
     github: "https://github.com/im-vishu/uber-clone",
