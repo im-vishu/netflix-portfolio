@@ -2,14 +2,9 @@
   "name": "netflix-portfolio",
   "private": false,
   "version": "1.0.0",
-  "description": "A Netflix-style portfolio showcase",
+  "description": "Netflix-inspired portfolio built with React, featuring dynamic UI, smooth animations, and a production-ready, scalable architecture.",
   "author": "Vishant Chaudhary",
   "type": "module",
-  "engines": {
-    "node": ">=22.12 <26",
-    "npm": ">=10"
-  },
-  "homepage": "https://im-vishu.github.io/netflix-portfolio",
   "repository": {
     "type": "git",
     "url": "https://github.com/im-vishu/netflix-portfolio.git"
@@ -18,9 +13,9 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "preview": "vite preview --host 0.0.0.0 --port 8080",
+    "start": "serve -s dist -l $PORT",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "serve -s dist -l tcp://0.0.0.0:$PORT",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -73,7 +68,6 @@
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
     "recharts": "^2.15.4",
-    "serve": "^14.2.6",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
@@ -98,10 +92,14 @@
     "globals": "^15.15.0",
     "jsdom": "^29.0.2",
     "postcss": "^8.5.6",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
     "vite": "^7.3.2",
     "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
