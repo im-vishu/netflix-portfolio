@@ -40,11 +40,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           {/* Terminal-style label */}
           <motion.div
             initial={{ width: 0 }}
@@ -94,9 +90,9 @@ const HeroSection = () => {
               ▶ View Projects
             </button>
 
-            {/* Put your resume PDF in: public/Vishant-Chaudhary-Resume.pdf */}
+            {/* Put your resume PDF in: public/vishant-chaudhary-resume.pdf */}
             <a
-              href="/Vishant-Chaudhary-Resume.pdf"
+              href="/vishant-chaudhary-resume.pdf"
               download
               className="group flex items-center justify-center gap-2 rounded border border-primary/50 bg-primary/10 px-6 py-3 font-semibold text-foreground backdrop-blur-sm transition-all hover:border-primary hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20 sm:px-8 sm:py-3.5"
             >
@@ -113,7 +109,7 @@ const HeroSection = () => {
             className="mt-10 flex flex-wrap items-center gap-2 sm:mt-12 sm:gap-3"
           >
             <span className="text-[10px] uppercase tracking-widest text-muted-foreground sm:text-xs">Stack →</span>
-            {["React", "TypeScript", "Node.js", "Python", "AWS"].map((tech, i) => (
+            {["React", "Next.js", "JavaScript", "Node.js", "Python", "AWS"].map((tech, i) => (
               <motion.span
                 key={tech}
                 initial={{ opacity: 0, scale: 0 }}
