@@ -7,23 +7,36 @@ const HeroSection = () => {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Coding workspace setup" className="h-full w-full object-cover" width={1920} height={1080} />
+        <img
+          src={heroBg}
+          alt="Coding workspace setup"
+          className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
         <div className="absolute inset-0 bg-background/20" />
         <div className="netflix-gradient absolute inset-x-0 bottom-0 h-1/3" />
       </div>
 
       {/* Animated grid overlay */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: `linear-gradient(hsl(357 92% 47% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(357 92% 47% / 0.3) 1px, transparent 1px)`,
-        backgroundSize: "60px 60px",
-      }} />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(357 92% 47% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(357 92% 47% / 0.3) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
 
       {/* Scanlines */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.03]">
-        <div className="h-full w-full" style={{
-          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(0 0% 100% / 0.1) 2px, hsl(0 0% 100% / 0.1) 4px)",
-        }} />
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(0 0% 100% / 0.1) 2px, hsl(0 0% 100% / 0.1) 4px)",
+          }}
+        />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6">
@@ -41,7 +54,8 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 rounded border border-primary/40 bg-primary/10 px-4 py-2 text-xs font-mono tracking-widest text-primary backdrop-blur-sm">
               <Terminal className="h-3 w-3" />
-              <span className="hidden sm:inline">~/portfolio $</span> status: <span className="animate-pulse">AVAILABLE FOR HIRE_</span>
+              <span className="hidden sm:inline">~/vishant $</span> status:{" "}
+              <span className="animate-pulse">OPEN TO WORK_</span>
             </span>
           </motion.div>
 
@@ -64,8 +78,7 @@ const HeroSection = () => {
             transition={{ delay: 1.8 }}
             className="mt-4 max-w-md text-base font-light leading-relaxed text-muted-foreground sm:max-w-lg sm:text-lg md:text-xl"
           >
-            Full-Stack Developer & UI/UX Designer crafting exceptional digital experiences
-            with modern technologies.
+            Software Developer building AI-powered, production-ready applications and APIs.
           </motion.p>
 
           <motion.div
@@ -80,8 +93,10 @@ const HeroSection = () => {
             >
               ▶ View Projects
             </button>
+
+            {/* Put your resume PDF in: public/Vishant-Chaudhary-Resume.pdf */}
             <a
-              href="#"
+              href="/Vishant-Chaudhary-Resume.pdf"
               download
               className="group flex items-center justify-center gap-2 rounded border border-primary/50 bg-primary/10 px-6 py-3 font-semibold text-foreground backdrop-blur-sm transition-all hover:border-primary hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20 sm:px-8 sm:py-3.5"
             >
