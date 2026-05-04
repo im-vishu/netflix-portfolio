@@ -10,7 +10,7 @@ const projects = [
     color: "357 80% 50%",
     github: "https://github.com/im-vishu/FraudShield-AI",
     demo: "http://localhost:8080/",
-    image: "/images/e-commerce-banner.png",
+    image: "/images/fraudshield.png",
   },
   {
     title: "Healthify-AgriTech",
@@ -27,8 +27,8 @@ const projects = [
     desc: "F.R.I.D.A.Y is a production-grade voice activated AI assistant built with Node.js, offering real-time conversations, intelligent automation, privacy-first local processing, and extensible cross platform capabilities scalable.",
     color: "150 70% 45%",
     github: "https://github.com/im-vishu/F.R.I.D.A.Y",
-    demo: "https://your-social-media-demo.com",
-    image: "/images/social-media-app.png",
+    demo: "https://y",
+    image: "/images/friday.png",
   },
   {
     title: "fuzzy-broccoli",
@@ -46,7 +46,7 @@ const projects = [
     color: "40 90% 50%",
     github: "https://github.com/im-vishu/MediSync",
     demo: "https://your-task-manager.com",
-    image: "/images/task-management.png",
+    image: "/images/medisync.png",
   },
   {
     title: "Uber-Clone",
@@ -55,7 +55,7 @@ const projects = [
     color: "190 80% 50%",
     github: "https://github.com/im-vishu/uber-clone",
     demo: "https://your-weather-app.com",
-    image: "/images/weather-app.png",
+    image: "/images/uber-clone.png",
   },
 ];
 
