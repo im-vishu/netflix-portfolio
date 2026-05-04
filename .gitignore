@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 netflix-boost.js
+.netflix_builds_logs

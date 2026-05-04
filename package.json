@@ -5,6 +5,10 @@
   "description": "A Netflix-style portfolio showcase",
   "author": "Vishant Chaudhary",
   "type": "module",
+  "engines": {
+    "node": ">=22.12 <26",
+    "npm": ">=10"
+  },
   "homepage": "https://im-vishu.github.io/netflix-portfolio",
   "repository": {
     "type": "git",
@@ -16,6 +20,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "start": "serve -s dist -l tcp://0.0.0.0:$PORT",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -68,6 +73,7 @@
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
     "recharts": "^2.15.4",
+    "serve": "^14.2.6",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
