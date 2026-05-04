@@ -2,9 +2,41 @@ import { motion } from "framer-motion";
 import SkillsScene3D from "./SkillsScene3D";
 
 const skillCategories = [
-  { title: "Frontend", skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vue.js"], icon: "🎨" },
-  { title: "Backend", skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL"], icon: "⚙️" },
-  { title: "Tools & DevOps", skills: ["Git", "Docker", "AWS", "CI/CD", "Figma"], icon: "🚀" },
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+    icon: "🎨",
+  },
+  {
+    title: "Backend",
+    skills: ["Node.js", "Express.js", "EJS", "REST APIs", "JWT Auth", "RBAC"],
+    icon: "⚙️",
+  },
+  {
+    title: "Languages",
+    skills: ["JavaScript", "TypeScript", "Python", "Core Java", "SQL"],
+    icon: "🧩",
+  },
+  {
+    title: "Databases & Caching",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Indexing"],
+    icon: "🗄️",
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: ["AWS", "Docker", "Linux", "CI/CD", "GitHub Actions", "Nginx"],
+    icon: "☁️",
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "Postman", "VS Code", "Swagger/OpenAPI", "ESLint", "Prettier"],
+    icon: "🧰",
+  },
+  {
+    title: "AI / ML",
+    skills: ["Machine Learning", "Anomaly Detection", "NLP", "Feature Engineering", "Model Evaluation"],
+    icon: "🧠",
+  },
 ];
 
 const SkillsSection = () => (
@@ -20,12 +52,7 @@ const SkillsSection = () => (
         <div className="mb-2 h-[2px] flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mb-10"
-      >
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-10">
         <SkillsScene3D />
       </motion.div>
 
@@ -44,6 +71,7 @@ const SkillsSection = () => (
               <span className="text-2xl">{cat.icon}</span>
               <h3 className="font-display text-2xl text-gradient-red sm:text-3xl">{cat.title}</h3>
             </div>
+
             <div className="flex flex-wrap gap-2">
               {cat.skills.map((skill, si) => (
                 <motion.span
