@@ -7,7 +7,7 @@ const education = [
     degree: "B.Tech in Computer Science",
     school: "DBUU, Dehradun,India",
     year: "2022-2026",
-    desc: "Strong academic record, GPA 7.9/10",
+    desc: "Strong academic record, CGPA 8.4/10",
     icon: Award
   },
 ];
@@ -15,17 +15,17 @@ const education = [
 // Certifications data
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    year: "2022",
-    desc: "Credential ID: ABCD1234, validates expertise in AWS architecture best practices.",
+    name: "IBM Full Stack Software Developer Professional Certificate",
+    issuer: "IBM",
+    year: "Learning",
+    desc: "Currently pursuing IBM Full Stack Software Developer Professional Certificate, gaining hands-on experience in modern web development, cloud technologies, APIs, and full-stack application deployment.",
     icon: Award
   },
   {
-    name: "Google Professional Data Engineer",
-    issuer: "Google Cloud",
-    year: "2021",
-    desc: "Credential ID: GCP123456, demonstrates ability to design data processing systems.",
+    name: "Google Cybersecurity Professional Certificate",
+    issuer: "Google",
+    year: "2026",
+    desc: "Pursuing Google Cybersecurity Professional Certificate, building skills in network security, threat detection, risk management, and incident response using industry tools, best practices, and real-world scenarios.",
     icon: Award
   },
   // Add more certifications if needed.
