@@ -1,40 +1,43 @@
 import { motion } from "framer-motion";
-import { Globe, Server, Cloud, Layers } from "lucide-react";
+import { Brain, Layers, Cloud, Server } from "lucide-react";
 
 const profiles = [
   {
-    icon: Layers,
-    title: "Full Stack Developer",
-    desc: "Building complete web applications from frontend to backend with modern frameworks, RESTful APIs, and database management.",
-    techs: ["React", "Node.js", "PostgreSQL", "TypeScript"],
+    icon: Brain,
+    title: "AI Software Developer",
+    desc: "Building AI-powered, production-ready applications—combining intelligent decision-making with clean architecture, robust APIs, and real-world problem solving.",
+    techs: ["Python", "Node.js", "ML", "APIs"],
     accentColor: "357 92% 47%",
   },
   {
-    icon: Server,
-    title: "Software Developer",
-    desc: "Developing robust, scalable software solutions with clean architecture, design patterns, and test-driven development.",
-    techs: ["Python", "Java", "C++", "Git"],
+    icon: Layers,
+    title: "Full Stack Developer",
+    desc: "Developing complete web applications end-to-end with modern UI, secure backend services, and scalable database design.",
+    techs: ["React", "TypeScript", "PostgreSQL", "REST"],
     accentColor: "210 100% 56%",
   },
   {
-    icon: Cloud,
-    title: "Aspiring Cloud Engineer",
-    desc: "Exploring cloud platforms, infrastructure as code, containerization, and CI/CD pipelines to build scalable cloud-native solutions.",
-    techs: ["AWS", "Docker", "Kubernetes", "Terraform"],
-    accentColor: "270 70% 60%",
+    icon: Server,
+    title: "Backend Developer",
+    desc: "Designing secure, scalable backend systems with authentication, clean service layers, caching, and performance-focused APIs.",
+    techs: ["Node.js", "Express", "JWT", "Redis"],
+    accentColor: "150 70% 45%",
   },
   {
-    icon: Globe,
-    title: "Web Developer — MERN Stack",
-    desc: "Crafting dynamic, responsive web applications using the MERN stack with modern UI/UX principles and real-time features.",
-    techs: ["MongoDB", "Express.js", "React", "Node.js"],
-    accentColor: "150 70% 45%",
+    icon: Cloud,
+    title: "Cloud Engineer",
+    desc: "Deploying and operating applications on the cloud with containerization, infrastructure fundamentals, and CI/CD to ship reliably.",
+    techs: ["AWS", "Docker", "CI/CD", "Linux"],
+    accentColor: "270 70% 60%",
   },
 ];
 
 const ProfilesSection = () => {
   return (
-    <section id="profiles" className="relative overflow-hidden border-t border-border bg-background px-4 py-20 sm:px-6 sm:py-28">
+    <section
+      id="profiles"
+      className="relative overflow-hidden border-t border-border bg-background px-4 py-20 sm:px-6 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +72,9 @@ const ProfilesSection = () => {
               {/* Bottom accent line */}
               <div
                 className="absolute bottom-0 left-6 right-6 h-[2px] rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: `linear-gradient(90deg, transparent, hsl(${profile.accentColor}), transparent)` }}
+                style={{
+                  background: `linear-gradient(90deg, transparent, hsl(${profile.accentColor}), transparent)`,
+                }}
               />
 
               <div className="relative">
@@ -88,9 +93,7 @@ const ProfilesSection = () => {
                 <h3 className="mb-2 font-display text-xl tracking-wide text-foreground sm:text-2xl">
                   {profile.title}
                 </h3>
-                <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
-                  {profile.desc}
-                </p>
+                <p className="mb-5 text-sm leading-relaxed text-muted-foreground">{profile.desc}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {profile.techs.map((tech) => (
