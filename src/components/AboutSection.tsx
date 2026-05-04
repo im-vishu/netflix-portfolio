@@ -1,29 +1,37 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { Code2, Sparkles, Zap, Briefcase, GraduationCap, Award, Coffee } from "lucide-react";
+import {
+  Zap,
+  GraduationCap,
+  Award,
+  Coffee,
+  ShieldCheck,
+  Brain,
+  Code2,
+} from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
-    desc: "Maintainable, scalable, and well-documented code following industry best practices.",
+    title: "Full-Stack Development",
+    desc: "Building end-to-end apps with React + modern backend APIs, focusing on clean architecture and maintainable code.",
   },
   {
-    icon: Sparkles,
-    title: "Creative Solutions",
-    desc: "Combining technical expertise with creative thinking for innovative digital products.",
+    icon: ShieldCheck,
+    title: "Secure & Reliable",
+    desc: "I care about production basics: validation, authentication, error handling, and writing code that’s easy to scale.",
   },
   {
     icon: Zap,
     title: "Performance First",
-    desc: "Lightning-fast load times and seamless user experiences across all devices.",
+    desc: "Optimized UI, efficient APIs, and smooth user experiences across devices—fast, responsive, and polished.",
   },
 ];
 
 const stats = [
-  { icon: Briefcase, value: 3, suffix: "+", label: "Years Experience" },
-  { icon: Award, value: 20, suffix: "+", label: "Projects Completed" },
-  { icon: GraduationCap, value: 5, suffix: "+", label: "Certifications" },
+  { icon: Brain, value: 0, suffix: "+", label: "Years Experience (Fresher)" },
+  { icon: Award, value: 12, suffix: "+", label: "Projects Built" },
+  { icon: GraduationCap, value: 3, suffix: "+", label: "Certifications" },
   { icon: Coffee, value: 1000, suffix: "+", label: "Cups of Coffee" },
 ];
 
@@ -43,24 +51,32 @@ const AnimatedCounter = ({ value, suffix }: { value: number; suffix: string }) =
       },
       { threshold: 0.5 }
     );
+
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [count, value]);
 
   return (
     <span ref={ref} className="font-display text-2xl text-foreground sm:text-3xl">
-      <motion.span>{rounded}</motion.span>{suffix}
+      <motion.span>{rounded}</motion.span>
+      {suffix}
     </span>
   );
 };
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative overflow-hidden border-t border-border bg-background px-4 py-20 sm:px-6 sm:py-28">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-        backgroundSize: "40px 40px",
-      }} />
+    <section
+      id="about"
+      className="relative overflow-hidden border-t border-border bg-background px-4 py-20 sm:px-6 sm:py-28"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+          backgroundSize: "40px 40px",
+        }}
+      />
 
       <div className="relative mx-auto max-w-6xl">
         {/* Header */}
@@ -82,10 +98,10 @@ const AboutSection = () => {
           className="glass-card mb-12 rounded-xl border-l-4 border-primary p-6 sm:p-8"
         >
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg italic">
-            "I believe in building software that not only works flawlessly but also{" "}
-            <span className="font-semibold text-primary not-italic">inspires and delights</span> users.
-            With a strong foundation in full-stack development and a passion for emerging technologies,
-            I bring ideas to life through clean architecture and pixel-perfect design."
+            "I’m a fresher full-stack developer who loves building{" "}
+            <span className="font-semibold text-primary not-italic">real-world, production-ready</span>{" "}
+            applications. I focus on clean code, strong fundamentals, and polished UI—turning ideas into fast,
+            secure, and scalable products."
           </p>
         </motion.div>
 
@@ -134,8 +150,14 @@ const AboutSection = () => {
         {/* What I Do / My Goal */}
         <div className="grid gap-5 md:grid-cols-2">
           {[
-            { title: "WHAT I DO", text: "I specialize in building end-to-end web applications, from designing intuitive user interfaces to architecting robust backend systems. My expertise spans modern JavaScript frameworks, cloud services, and DevOps practices." },
-            { title: "MY GOAL", text: "To leverage cutting-edge technologies and cloud computing to build scalable, impactful software solutions. I'm constantly learning and evolving, with a keen interest in cloud architecture and emerging tech paradigms." },
+            {
+              title: "WHAT I DO",
+              text: "I build full-stack projects—from responsive React frontends to backend APIs—using modern tools, best practices, and a strong focus on real-world usability.",
+            },
+            {
+              title: "MY GOAL",
+              text: "To start my career as a software developer and grow into a strong full-stack / backend engineer by building impactful products and continuously improving my skills.",
+            },
           ].map((item) => (
             <motion.div
               key={item.title}
