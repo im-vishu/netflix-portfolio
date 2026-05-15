@@ -3,10 +3,10 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    role: "Freelance Software Developer",
+    role: "Freelance Software Developer & Graphic Designer",
     company: "Self-Employed",
     period: "Dec 2025 – Present",
-    desc: "Building production-ready web applications and APIs with clean architecture, performance optimization, and reliable deployments.",
+    desc: "Building production-ready web applications, APIs, and portfolio websites while creating brand assets, social media creatives, posters, and campaign visuals for digital-first projects.",
   },
   {
     role: "Software Engineer Intern",
