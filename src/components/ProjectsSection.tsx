@@ -60,20 +60,31 @@ const projects = [
   {
     title: "Brand Identity Kit",
     tag: "Graphic Design / Branding",
-    desc: "A cohesive visual identity system with logo directions, color palette, typography pairings, and social-ready brand assets for a modern digital product.",
+    desc: "A premium corporate brand direction using a dark luxury palette, gold accents, textured backgrounds, trade-focused visuals, and polished typography for a high-trust business identity.",
     color: "315 85% 58%",
+    image: "/images/graphic-design/premium-luxury-corporate-post.png",
   },
   {
     title: "Campaign Poster Series",
     tag: "Graphic Design / Posters",
-    desc: "A high-impact poster set focused on strong visual hierarchy, bold composition, and scroll-stopping layouts for digital and print campaign use.",
+    desc: "A coordinated Budding Mariners poster campaign with consistent navy-yellow styling, maritime imagery, ranked college cards, and bold educational callouts.",
     color: "25 95% 55%",
+    image: "/images/graphic-design/buddingmariners1.png",
+    gallery: [
+      "/images/graphic-design/buddingmariners2.png",
+      "/images/graphic-design/buddingmariners3.png",
+      "/images/graphic-design/buddingmariners4.png",
+      "/images/graphic-design/buddingmariners5.png",
+      "/images/graphic-design/buddingmariners6.png",
+    ],
   },
   {
     title: "Social Media Creative Pack",
     tag: "Graphic Design / Social",
-    desc: "A reusable collection of social graphics, story templates, and launch creatives designed for consistent brand recognition across platforms.",
+    desc: "A set of social-ready post concepts with strong hooks, premium textured backgrounds, clear CTA placement, and a visual system built for repeat campaigns.",
     color: "175 70% 42%",
+    image: "/images/graphic-design/social-media-post.png",
+    gallery: ["/images/graphic-design/premium-luxury-corporate-post.png"],
   },
 ];
 
@@ -177,6 +188,19 @@ const ProjectsSection = () => (
               </div>
               <h3 className="mt-2 font-semibold text-foreground">{p.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+              {p.gallery && (
+                <div className="mt-4 grid grid-cols-3 gap-2">
+                  {p.gallery.slice(0, 6).map((image) => (
+                    <img
+                      key={image}
+                      src={image}
+                      alt={`${p.title} design sample`}
+                      className="aspect-square rounded-lg border border-border/40 object-cover"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

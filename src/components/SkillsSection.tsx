@@ -37,6 +37,11 @@ const skillCategories = [
     skills: ["Machine Learning", "Anomaly Detection", "NLP", "Feature Engineering", "Model Evaluation"],
     icon: "🧠",
   },
+  {
+    title: "Graphic Design",
+    skills: ["Canva", "Photoshop", "Microsoft Designer", "Figma", "Brand Assets", "Social Creatives"],
+    icon: "GD",
+  },
 ];
 
 const SkillsSection = () => (
