@@ -6,7 +6,7 @@ const experiences = [
     role: "Freelance Software Developer & Graphic Designer",
     company: "Self-Employed",
     period: "Dec 2025 – Present",
-    desc: "Building production-ready web applications, APIs, and portfolio websites while creating brand assets, social media creatives, posters, and campaign visuals for digital-first projects.",
+    desc: "Designing brand identities, social media creatives, posters, campaign visuals, and portfolio-ready mockups while supporting clients with responsive websites and digital presentation assets.",
   },
   {
     role: "Software Engineer Intern",
