@@ -57,6 +57,24 @@ const projects = [
     demo: "https://your-weather-app.com",
     image: "/images/uber-clone.png",
   },
+  {
+    title: "Brand Identity Kit",
+    tag: "Graphic Design / Branding",
+    desc: "A cohesive visual identity system with logo directions, color palette, typography pairings, and social-ready brand assets for a modern digital product.",
+    color: "315 85% 58%",
+  },
+  {
+    title: "Campaign Poster Series",
+    tag: "Graphic Design / Posters",
+    desc: "A high-impact poster set focused on strong visual hierarchy, bold composition, and scroll-stopping layouts for digital and print campaign use.",
+    color: "25 95% 55%",
+  },
+  {
+    title: "Social Media Creative Pack",
+    tag: "Graphic Design / Social",
+    desc: "A reusable collection of social graphics, story templates, and launch creatives designed for consistent brand recognition across platforms.",
+    color: "175 70% 42%",
+  },
 ];
 
 const ProjectsSection = () => (

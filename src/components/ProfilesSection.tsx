@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Layers, Cloud, Server } from "lucide-react";
+import { Brain, Layers, Cloud, Palette, Server } from "lucide-react";
 
 const profiles = [
   {
@@ -29,6 +29,13 @@ const profiles = [
     desc: "Deploying and operating applications on the cloud with containerization, infrastructure fundamentals, and CI/CD to ship reliably.",
     techs: ["AWS", "Docker", "CI/CD", "Linux"],
     accentColor: "270 70% 60%",
+  },
+  {
+    icon: Palette,
+    title: "Graphic Designer",
+    desc: "Creating polished brand visuals, social media creatives, posters, and product graphics with a strong eye for layout, hierarchy, and memorable visual systems.",
+    techs: ["Branding", "Posters", "Canva", "Figma"],
+    accentColor: "315 85% 58%",
   },
 ];
 
