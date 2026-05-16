@@ -70,21 +70,39 @@ const ContactSection = () => {
 
             <div className="space-y-3">
               {[
-                { icon: Mail, text: contactEmail },
+                { icon: Mail, text: contactEmail, href: `mailto:${contactEmail}` },
                 { icon: Phone, text: "Available for project calls" },
                 { icon: MapPin, text: "India / Remote" },
-              ].map(({ icon: Icon, text }) => (
-                <motion.div
-                  key={text}
-                  whileHover={{ x: 6, scale: 1.02 }}
-                  className="glass-card shimmer-hover group flex items-center gap-3 rounded-xl p-3 transition-all"
-                >
-                  <div className="rounded-xl bg-primary/10 p-2.5 ring-1 ring-primary/20 transition-all group-hover:bg-primary/20 group-hover:ring-primary/40 group-hover:shadow-lg group-hover:shadow-primary/20">
-                    <Icon className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-sm text-muted-foreground transition-colors group-hover:text-foreground sm:text-base">{text}</span>
-                </motion.div>
-              ))}
+              ].map(({ icon: Icon, text, href }) => {
+                const content = (
+                  <>
+                    <div className="rounded-xl bg-primary/10 p-2.5 ring-1 ring-primary/20 transition-all group-hover:bg-primary/20 group-hover:ring-primary/40 group-hover:shadow-lg group-hover:shadow-primary/20">
+                      <Icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-sm text-muted-foreground transition-colors group-hover:text-foreground sm:text-base">{text}</span>
+                  </>
+                );
+
+                return href ? (
+                  <motion.a
+                    key={text}
+                    href={href}
+                    whileHover={{ x: 6, scale: 1.02 }}
+                    className="glass-card shimmer-hover group flex items-center gap-3 rounded-xl p-3 transition-all"
+                    aria-label={`Email ${contactEmail}`}
+                  >
+                    {content}
+                  </motion.a>
+                ) : (
+                  <motion.div
+                    key={text}
+                    whileHover={{ x: 6, scale: 1.02 }}
+                    className="glass-card shimmer-hover group flex items-center gap-3 rounded-xl p-3 transition-all"
+                  >
+                    {content}
+                  </motion.div>
+                );
+              })}
             </div>
 
             <div className="flex gap-3 pt-4">

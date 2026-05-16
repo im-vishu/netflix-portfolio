@@ -103,7 +103,11 @@ const projects = [
     desc: "A set of social-ready post concepts with strong hooks, premium textured backgrounds, clear CTA placement, and a visual system built for repeat campaigns.",
     color: "175 70% 42%",
     image: "/images/graphic-design/social-media-post.png",
-    gallery: ["/images/graphic-design/premium-luxury-corporate-post.png"],
+    gallery: [
+      "/images/graphic-design/premium-luxury-corporate-post.png",
+      "/images/graphic-design/trekuppost.png",
+      "/images/graphic-design/trekupstory.png",
+    ],
   },
 ];
 
